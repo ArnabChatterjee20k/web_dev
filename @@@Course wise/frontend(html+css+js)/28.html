@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables & Custom Properties</title>
+    <style>
+        :root{
+            --box-color:cyan;
+            /* to use it as a global variable which means all can use it through out the code*/
+            --danger-color:red;
+            --maxh:233px;
+            --maxw:333px;
+            
+
+        }
+        .box{
+            /* variable.In css variable begins with -- and where we want to use it use var() then inside it write the variable name.Inside var we also have to give --*/
+            --box-color:cyan;
+            width: 200px;
+            height: 300px;
+            /* background-color: blue ; */
+            border: 2px solid red;
+            margin: 2px 9px;/* to get gaps between boxes otherwise they collide*/
+
+            box-shadow: 10px 3px 3px var(--box-color);
+        }
+        .container{
+            display: flex;
+            /* background-color: var(--box-color);Here it will not work as the scope of the variabel is only inside the box scope. In programming language it is like local variable.To use it here inside container class we have to again define or we can use a global or root variable */
+            align-items: center;
+            justify-content: center;
+            max-width: var(--maxw);
+            max-height: var(--maxh);
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <h1 style="color: var(--danger-color);">asas</h1>
+    </div>
+</body>
+</html>
+
+
+<!--Shortcut for using variable is type --then select from the snippet-->

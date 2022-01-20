@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+         body{
+            background-color: aqua;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(138, 168, 168);
+            
+            transition: 1s;
+            /* All Transition will take place */
+            /* Here if we use transition the effect will be much more good */
+            transition: background 1s,transform 1s 2s linear;
+            /*by specifying each time of change.2nd property to maintain the differece.First background then after 2sec transform .Last property to maintain rate.ease can also be used */
+        }
+        .box:hover{
+            border: 4px solid rgb(48, 145, 133);
+            background-color: rgb(224, 172, 112);
+            /* transition: 1s; unstable effect */
+            transform: rotateY(450deg);
+            transform: translateX(400px) translateY(400px) rotateZ(450deg) scaleX(2) scaleY(3);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

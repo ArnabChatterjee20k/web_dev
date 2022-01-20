@@ -1,0 +1,79 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;    
+    justify-content: space-evenly;
+}
+
+#clockcontainer{
+    position: relative;/* to make the positions of other elememets relative to this */
+
+    /* background-color: red; it will n or appear as it is not havibg height and width */
+    height: 40vw;
+    width: 40vw;
+    /* height: 440px;
+    width: 440px; */
+    /* margin: auto; */
+    background: url(image/clock.png) no-repeat  ;
+    background-size: 100%;
+    /*  here since 50% size is used so in  */
+    /* border: 2px solid red; */
+}
+
+#hour{
+    height: 26%;
+    width: 1%;
+    top: 21%;
+    left: 49.65%;
+    /* display: none; */
+    
+}
+
+#min{
+    height: 34%;
+    width: 1%;
+    top: 13%;
+    left: 49.65%;
+    opacity: 0.8;
+    /* display: none; */
+}
+
+
+#sec{
+    height: 21%;
+    width: 1%;
+    top: 26.5%;
+    left: 49.65%;
+    opacity: 0.8;
+    /* display: none; */
+}
+#hour,#min,#sec{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+.btncontainer{
+    position: relative;
+    width: 20vw;
+}
+
+.time{
+    position: absolute;
+    width: 8vw;
+    font-size: small;
+}
+#hr_inp{
+    top: 30%;
+}
+#min_inp{
+    top: 35%;
+}
+#btn{
+    top: 40%;
+    cursor: pointer;
+    border-radius: 20%;
+}

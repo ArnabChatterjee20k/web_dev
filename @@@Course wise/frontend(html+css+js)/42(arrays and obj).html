@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Objects in JavaScript</title>
+</head>
+<body>
+    <p>Arnab</p>
+
+    <script>
+        //primitive data types
+        let myvar1=34;
+        let myvar2="string";
+        let myvar3=null;// null data type
+        let myvar4=true;//boolean
+
+        //object to store key value pair like dictionary in python
+        let employee={
+            name:"Arnab",
+            salary:"2000",
+            profession:"programmer",
+            "asas s":12
+        };
+        console.log(employee)
+        //transversing object in 2ways
+        console.log(employee.name)
+        // or
+        console.log(employee["name"])
+        
+        console.log(employee["asas s"])
+        // note to make a key having space we have to use quotation and while accesing them we have to use third barcket([]) 
+
+        
+        
+        //array object . We can perform any tranversiong operation of list/arrays of python here
+
+        let name=[1,2,3,"Arnab",true,null,undefined];
+        
+        //null is an assigned value. It means nothing.
+        // undefined typically means a variable has been declared but not defined yet.
+        console.log(name);
+        console.log(name[0]);
+
+        //arrays using new keyword like list() dict() etc in python
+        
+        let num=new Array(1,2,3,4,0);
+        console.log(num);
+        //sort and length
+        console.log(num.length,num.sort());
+        
+        //inserting elements in array at end
+        num.push(name,1,2);
+        console.log(num);
+
+        // making empty array of many elements
+        emp=new Array(23);
+        console.log(emp);
+    </script>
+</body>
+</html>

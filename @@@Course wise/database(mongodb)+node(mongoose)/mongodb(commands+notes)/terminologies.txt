@@ -1,0 +1,5 @@
+SQL Terms/Concepts to  MongoDB Terms/Concepts
+database           | database
+table              | collection
+row                | document or BSON document
+column             | field

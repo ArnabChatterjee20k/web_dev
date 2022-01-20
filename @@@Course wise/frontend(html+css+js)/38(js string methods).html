@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings methods</title>
+</head>
+<body>
+    <div class="container">
+        <p>This a;ska;</p>
+    </div>
+    <script>
+        var a="thi's'";
+        console.log(a);
+        var b='asa"s"';
+        console.log(b);
+
+        // concatnation
+        console.log(a+b);
+        
+        // string formatting
+        var c="Arnab"
+        var temp=`${c} is nice ${b}`;//like string formatting
+        console.log(temp)
+        // bacticks present below esccape in with tile in keyboard
+
+        // length of string
+        var len=c.length
+        console.log(`"Arnab" has ${len} letters`)
+
+        // escape sequence character
+        console.log("Arnab\nchatterjee")
+        console.log("Arnab\tchatterjee")
+        console.log("Arnab\\tchatterjee")
+
+        // string using constructor
+        var y=new String("arnab")
+        console.log(y)
+        
+    </script>
+</body>
+</html>

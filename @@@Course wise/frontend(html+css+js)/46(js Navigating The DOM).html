@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Navigating The DOM</title>
+</head>
+<body>
+<!-- DOM == Document Object Model -->
+
+<div id="main" class="container">
+    <ul id="nav">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Data</li>
+        <li>Contact</li>
+    </ul>
+</div>
+   
+<script> 
+// grabbing elements
+// by id
+let main=document.getElementById("main")
+console.log(main)
+
+let nav=document.getElementById("nav")
+console.log(nav)
+
+console.log(nav.innerHTML)//return html inside nav id in string format
+
+//manipulating the html
+nav.innerHTML="asa"
+// -----------------------------------------------------------
+
+
+//by  class 
+main=document.getElementsByClassName("container")
+console.log(main)
+console.log(main[0])
+// ----------------------------------------------------------
+
+// by selectors like css. Almost all css selector works and als the pseudo and nthchild and the the firstone matched will be returned
+
+let sel=document.querySelector(".container")
+console.log("selector is returning",sel)
+
+sel=document.querySelector("#nav>li")
+console.log("selector is returning",sel)
+
+
+//grabbing all selectors of that name in the whole document
+sel=document.querySelectorAll("#nav>li")
+console.log(sel)
+// sel[0].innerHTML="li1"
+
+</script>
+</body>
+</html>

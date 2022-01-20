@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction - Alert, Prompt, Confirm</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rem debitis voluptas animi ex recusandae, fugiat fuga eius maxime sequi enim fugit nobis laborum eveniet, harum esse facilis velit illum.</p>
+
+    <script>
+        //Modal windows are commonly implemented in ways that block the possibility to move, minimize, iconify, or push that window back, and they grab input focus, which often prevents use of a system's cut, copy, and paste facilities.
+        
+        //A modal window forces users to complete that action before going back to the browser window. This makes users more productive because they’re doing one action at a time instead of multi-tasking. Users are less likely to get confused and lost in their workflow because of the control and constraint modal windows have.
+        
+        //Alert in-browser js which pop up message in a modal window-Does not return any value. We have to prees ok
+        //First message will appear then content will be shown
+        alert("Message");
+        // alert(1+1);
+        
+
+
+        // Prompt.Its like input field
+        let name=prompt("What is your name?","Guest")//Guest is the default argument.If nothing  is provided then default will be initialised in  name.
+        console.log(name);
+
+
+        //confirm to g et confirmation from user
+        let deletepost = confirm("Do your really want to delete this post?");
+        console.log(deletepost);
+        // If ok pressed then it will return true and if cancel pressed the it will return false
+
+        if(deletepost==true){
+            console.log("Deleted");
+        }
+        else{
+            console.log("not deleted")
+        }
+        
+    </script>
+</body>
+</html>

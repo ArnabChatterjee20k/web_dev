@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Here in this case external will work as it will be encountereed last. -->
+    <!-- <style>
+        p{color: brown; background-color: aquamarine; font-size: large;font-style: italic;}
+    </style>
+
+    <link rel="stylesheet" href="10.css"> -->
+
+
+    <!-- But here internal will work it has been encountered last -->
+    <link rel="stylesheet" href="10.css">
+    <style>
+        p{color: brown; background-color: aquamarine; font-size: large;font-style: italic;}
+    </style>
+
+    
+</head>
+<body>
+    <p>Here internal will work</p>
+    <p style="color: bisque; background-color:violet;">Here inline is working</p>
+</body>
+</html>

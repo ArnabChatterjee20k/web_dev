@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background: rgb(19, 18, 18);
+    color: white;
+}
+ul{
+    display: flex;
+}
+li{
+    list-style: none;
+    padding:  20px;
+}
+
+body::before{
+    position:absolute;
+    top: 0px;
+    content: "";
+    background: url('/static/ca.jpg') no-repeat center center/cover;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+}
+
+.container{
+    margin: 20vh auto;
+    /* background: url('/static/ca.jpg') no-repeat center center; */
+    max-width: 70%;
+}
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+input,textarea{
+    font-size: larger;
+    font-weight: bold;
+    display: block;
+    margin: 8px auto ;
+    width: 100%;
+    line-height: 170%;
+    resize: none;
+    /* outline: none; */
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(236, 208, 203);
+    
+}
+button{
+    margin: auto;
+    display: block;
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: turquoise;
+    box-shadow:5px 5px rgb(149, 187, 183);
+    outline:none ;
+    border: 2px solid black;
+    cursor: pointer;
+    user-select: none;
+    transition: 2s;
+}
+button:active{
+    transform: scale(0.98) translateY(2px) translateX(2px) ;
+}
+

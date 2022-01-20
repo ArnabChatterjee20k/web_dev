@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        .container{
+            background-color: sandybrown;
+            border: 2px solid black;
+            height: 1288px;
+        }
+        
+        .box{
+
+        display: inline-block;
+        border: 2px solid red;
+        width: 150px;
+        height: 150px;
+        margin: 2px;
+        }
+        /* #box1{
+            position: relative;
+            top: 143px;
+        }
+            
+        #box2{
+            position: absolute;
+            top: 143px;
+        } */
+        #box3{
+            position: fixed;
+            /* top: 170px; */
+            right: 30px;
+        }
+        #box4{
+            position: sticky;
+            /* top: 160px; */
+            top: 0px;
+        }
+            
+        /* fixed position will not occupy any space in the body, so the next element (eg: an image) will be behind the fixed element. sticky position occupies the space, so the next element will not be hidden behind it. Following image is fixed some part of image is hidden behind navbar, because Fixed element doesn't occupy space. */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+
+    </div>
+</body>
+</html>
+
+<!-- Never give id only with numbers it will give error.ID is similar to variables -->
+
+<!-- Next html file is also about the posn -->

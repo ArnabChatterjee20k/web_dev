@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time In JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        This is a container
+    </div>
+    <script>
+        // Date() is constructor which returns date object
+        console.log("This is date and time project")
+        // working with date
+        let t1= new Date();
+        console.log(t1);// in ist format
+
+        // working with reference time
+        let t2= new Date(0); // it will give us reference
+        let t3=new Date(1000);// it will give us the time after 1s of the reference time
+        console.log(t2);// in ist format
+        console.log(t3);// in ist format
+
+        // let newdate= new Date("2019") // it will give us reference time but of year 2019
+
+
+
+
+        // in normal format
+        let newdate= new Date("2021-09-30")
+        console.log(newdate)
+
+        // newdate= new date(year,month,date,hours,minutes,seconds,milliseconds)
+
+        newdate= new Date(3021,2,6,10,2,13,10,12)
+        console.log(newdate);
+   
+
+
+        // Functions
+        let yr=newdate.getFullYear();
+        console.log("This year is",yr)
+        let dt=newdate.getDate();
+        console.log("This date is",dt)
+        // likewise month and other functions of hur and sec etc
+
+
+        // changng date,month or others
+        newdate.setDate(13);
+        console.log(newdate);
+        // newdate.setDate(32);//it will automatically rectify or correction or adjust itself.
+
+        // current time stamp-- total millisec passeed from the referenece time point
+        console.log(Date.now())
+        // we can use it to calc execution time
+
+    </script>
+</body>
+</html>
+
+<!--  timestamp of london UTC -->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors height background width border</title>
+    <style>
+        #first{font-size: 30px;
+                color: aqua;
+            background-color: brown;
+            border-top: 11px yellow solid;
+            border-top-width: 10px;/*targetting a single border*/
+            border-top-left-radius:90px;
+        }
+
+        /*Solid is the border style*/
+        #second{font-size: 30px;
+            color:red ; 
+            background: green; 
+            height: 120px;/*height of bg color*/
+            width: 280px;/*width of bg color*/
+            border: 4px black solid ;
+        /* border-width: 4px;
+            border-color: green;
+            border-style: solid;  */
+        border-radius: 110px; /*to make curvey rounds of edges of borders*/}
+
+        #third{
+            height: 700px;
+            width:800px; 
+            background-image: url('https://source.unsplash.com/user/erondu/1600x900');/*u give loaction of a folder*/
+            border: 2px solid red;
+            background-repeat: no-repeat; /* repeat-x and repeat-y will make it repeat on x and y axis */
+            /* background-position: 192px 34px; */
+            background-position: center center;
+            /* background-position: bottom right; */
+            /* background-position: top center; */ 
+
+    </style>
+</head>
+<body>
+    <h1>First  heading</h1>
+    <p id="first">This is first </p>
+    <h1>Second  heading</h1>
+    <p id="second">This is Second</p>
+    <h1>Third para</h1>
+    <p id="third">this is 3rd</p>
+    <!-- Colors can also be written in rgb and hexadecimal values -->
+</body>
+</html>

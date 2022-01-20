@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Used from google fonts-->
+
+    <title>Alignment by float and clear</title>
+
+    <style>
+        
+        *{
+            /* universal selector */
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Akaya Kanadaka', cursive; /* For each part in body */
+        }
+        .container{
+            width: 900px;
+            border: 3px solid purple;
+            margin: auto; 
+            background-color: rgb(216, 233, 231);
+             /*Automatically sets equal margin on right and left side of x axis and centered it horizontally */
+            /* margin: 17px auto;*/  /*for giving Y axis magin and x auto margin*/
+        }
+        .item{
+
+            border:3px solid grey;
+            margin: 12px 3px;  /* y and  x */
+            padding: 12px 3px;/* y and  x */
+            background: rgb(241, 235, 215);
+        }
+        #fruits{
+                float: left;
+                width: 48%;
+        }
+        #computer{
+            float: right;
+            width: 48%;
+        }
+        #stationary{
+            clear: both;
+            
+            width: 99%;
+
+        }
+        h3,p{
+            text-align: center;
+        }
+        
+        h1{
+            margin: 23px auto;
+            width: 162px;  /* width of the text */
+            padding: 6px;
+            border: 7px solid #e5dcd9;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Welcome</h1>
+        <div id="fruits" class="item">
+            <h3>Fruits</h3>
+            <p class="para" id="fruitspara">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo incidunt voluptas, labore ab itaque consectetur maiores blanditiis natus accusamus voluptate, repellat ipsam ex sint provident consequuntur vero rerum dolorem eligendi!</p>
+        </div>
+        
+        <div id="computer" class="item">
+            <h3>computer</h3>
+            <p class="para" id="computerpara">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo incidunt voluptas, labore ab itaque consectetur maiores blanditiis natus accusamus voluptate, repellat ipsam ex sint provident consequuntur vero rerum dolorem eligendi!</p>
+        </div>
+        
+        <div id="stationary" class="item">
+            <h3>stationary</h3>
+            <p class="para" id="stationarypara">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo incidunt voluptas, labore ab itaque consectetur maiores blanditiis natus accusamus voluptate, repellat ipsam ex sint provident consequuntur vero rerum dolorem eligendi!</p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>stationary</h3>
+            <p class="para" id="stationarypara">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo incidunt voluptas, labore ab itaque consectetur maiores blanditiis natus accusamus voluptate, repellat ipsam ex sint provident consequuntur vero rerum dolorem eligendi!</p>
+        </div>
+
+
+
+
+    </div>
+
+</body>
+</html>
+<!-- if used .+any name or #+any name then a class or id  will be created in div tag -->

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css selectors</title>
+    <style>
+        /* Element selector */
+        p{color: darkorange;}
+        
+        /* class selector */
+        .red{color: darkgreen;background-color: chocolate;}
+        
+        /* id selector */
+        #blue{color:darkgrey;}
+        
+        /* group selector */
+        footer,header{color: bisque;background-color:brown;border:3px solid yellow}
+
+    </style>
+</head>
+<body>
+    <header>selectors</header>
+    <p>Element seletor</p>
+    <p class="red">Class selector</p>
+    <p id="blue">ID selector</p>
+    <div>
+        <p>This is inside div but still element selector</p> 
+        <p id="blue" class="red">Both id and class are here</p>
+    </div>
+    <footer>Header and footer r made using group selector</footer>
+</body>
+</html>

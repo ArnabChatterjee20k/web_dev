@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute and nth child pseudo selector </title>
+    <style>
+        .container{
+            /* TO make center make it block(not inline block then set width and set margin to auto)  */
+            display: block;
+            margin:auto;
+            width: 23px;
+        }
+        input{
+            display: block;
+        }
+
+        /* pseudo selector using attributes */
+        /* pseudo selector to target a attribute.Here input is targetted whose attribute type is text */
+        input[type="text"]{
+            padding: 23px;
+            border: 2px solid red;
+        }
+
+        /* For anchor tag whose taget is set.Here first link will get the changes as the first one is having only target not the 2nd one  */
+        a[target]{
+            font-size: 23px;
+            color: violet;
+        }
+        /* For a tag whose taget is self  */
+        a[target="_self"]{
+            font-size: 46px;
+            color: rebeccapurple;
+        }
+        input[type="password"]{
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* nth child psudo selector */
+        /* This will aplly css for 3rd child of li  */
+        li:nth-child(3){
+            color: cyan;
+            
+        }
+        /* To apply on every 2nd child/or all even no. child  */
+        li:nth-child(2n+0){
+            color: red;
+            background-color: yellow;
+            /* Here 0 is the starting point.If we use use 4 instead of 0 it will start from 4th child  and 2 is the number of steps and*/
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="google.com" target="_blank">Go to google</a></h1><!-- TO open link in new tab -->
+        
+        <h1><a href="google.com" >Go to google</a>
+        <a href="google.com" target="_self">Go to google</a></h1><!-- self opens the link in the same tab -->
+        <form class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            <li class="item" id="item1">Item1</li>
+            <li class="item" id="item2">Item2</li>
+            <li class="item" id="item3">Item3</li>
+            <li class="item" id="item4">Item4</li>
+            <li class="item" id="item5">Item5</li>
+            <li class="item" id="item6">Item6</li>
+            <li class="item" id="item7">Item7</li>
+            <li class="item" id="item8">Item8</li>
+            <li class="item" id="item9">Item9</li>
+            <li class="item" id="item10">Item10</li>
+        </ul>
+    </div>
+</body>
+</html>

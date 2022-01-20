@@ -1,0 +1,28 @@
+body{
+    background: rgb(243, 103, 103);
+}
+.container{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.upload_box{
+    font-size: 16px;
+    background: white;
+    border-radius:50px ;
+    box-shadow: 5px 5px 5px 5px black;
+    outline: none;
+}
+
+::-webkit-file-upload-button{
+    color: white;
+    background: rgb(40, 197, 163);
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 1px 0 1px rgba(135, 206, 30, 0.5);
+}
+::-webkit-file-upload-button:hover{
+    background: rgb(174, 199, 62);
+}

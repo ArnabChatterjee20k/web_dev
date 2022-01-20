@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fito</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <style>
+        /* css reset */
+        /* to reset the body css so that we can overwrite as per our wish */
+        body {
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            background-image: url('F:/complete web development bootcamp/projects/gymweb/img/bg1.jpg');
+            /* height: 2999px; */
+            background-repeat: no-repeat;
+
+        }
+
+        .left {
+            display: inline-block;
+            /* border: 2px solid red; */
+            /* to set its position with respective to its parent conatainer(header class) */
+            position: absolute;
+            top: 15px;
+            left: 12px;
+        }
+
+        .left img {
+            filter: invert(64%);
+            width: 190px;
+            height: 92px
+        }
+
+        .left img:hover {
+            filter: invert(100%);
+
+        }
+
+        .left div {
+            text-align: center;
+            font-size: 36px;
+            line-height: 42px;
+
+        }
+
+        .mid {
+            display: block;
+            width: 50%;
+            margin: 9px auto;
+            /* border: 2px solid green; */
+
+        }
+
+        .right {
+            display: inline-block;
+            /* border: 2px solid blue; */
+            /* to set its position with respective to its parent conatainer(header class) */
+            position: absolute;
+            top: 63px;
+            right: 20px;
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 22px;
+            padding: 36px;
+            margin: 2px;
+        }
+
+        .navbar li a {
+            /* since the the words are under the a tag so we have to set color property in a instead of li */
+            color: #ffd400;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            color: #b3d5ca;
+            text-decoration: underline;
+            position: relative;
+            top: 7px;
+        }
+
+        .btn {
+            margin: 0px 9px;
+            padding: 10px 15px;
+            border: 3px solid #c57c76;
+            border-radius: 33px;
+            cursor: pointer;
+            background-color: #ffc5b0;
+            font-family: Helvetica, sans-serif;
+        }
+
+        .btn:hover {
+            background-color: #c57c76
+        }
+
+        .container {
+            
+            width: 40%;
+            margin: 56px 52px;
+            padding: 12px 12px;
+        }
+
+        .container h1 {
+            text-align: center;
+            text-decoration: black;
+            font-family: 'Zen Tokyo Zoo', cursive;
+        }
+
+        .form-group input {
+            text-align: center;
+            width: 50%;
+            margin: 6px 158px;
+            padding: 4px 2px;
+            font-size: 19px;
+            border: 4px solid #b49350;
+            border-radius: 11px;
+        }
+
+        /* Applying some extra and overwriting styles of btn class and it will only target the container class */
+        .container .btn {
+            margin: 20px 230px;
+            border-color: #d5db46;
+            /* Since the border weight are same so color is only modified */
+            border-radius: 29px;
+            background-color: #d9e185;
+            width: 30%;
+        }
+        .container .btn:hover{
+              background-color: #c0b975;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="F:/complete web development bootcamp/projects/gymweb/img/2.jpg" alt="Not found">
+            <div>Fitness</div>
+        </div>
+        <!-- mid box for navbar -->
+        <div class="mid">
+            <!-- mid -->
+            <div class="navbar">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Tips</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Eligibility</a></li>
+
+
+                </ul>
+            </div>
+
+        </div>
+        <!-- right box for buttons -->
+        <div class="right">
+            <button class="btn">Call us now</button>
+            <button class="btn">Email</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Join our club</h1>
+        <form>
+            <div class="form-group">
+
+                <div class="form-group">
+                    <input type="text" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Enter Your Age">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter Your Phone Number">
+                </div>
+            </div>
+        </form>
+        <button class="btn">Submit</button>
+
+
+    </div>
+    </div>
+</body>
+
+</html>
+
+
+<!-- to check bodrder we should place content otherwise all borders will collapse -->
+<!-- inline block allow us to make the element and also allow us to set height and width.
+It provides us service to do both inline and block styles on the element. -->
+
+<!-- Sometimes some elements do inherit some settings from body due to their default settings definrd in user agent stylesheet. For example text in button and font family.We have to set them by their class or id selector -->

@@ -1,0 +1,66 @@
+/* for display of sites in phone */
+#navbar{
+    flex-direction: column;/* to adjust logo and  nav  */
+}
+
+
+#navbar ul li a{
+    font-size: 1rem;
+    padding: 0px 7px;
+    padding-bottom: 8px;
+}
+/* home section */
+#home{
+    height: 170px;
+    padding: 5px 68px;
+    
+}
+
+#home::before{
+    height: 312px;
+}
+
+#home p{
+    font-size: 13px;
+}
+/* services section */
+#services{
+    flex-direction: column;
+    /* to wrap the boxes and the bg top image now will be ok */
+}
+
+#services .box{
+    padding: 25px;
+    margin: 2px 2px ;
+    margin-bottom: 20px;
+}
+
+#services .box img{
+    width: 197px;
+    height: auto;
+}
+
+/* client section */
+#client{
+    flex-wrap: wrap;
+}
+#client img{
+    width: 66px;
+    padding: 2px 6px;
+    height: auto;
+}
+
+/* contact */
+
+
+/* footer */
+
+
+.h-primary{
+    font-size: 13px;
+}
+
+.btn{
+    font-size: 13px;
+    padding: 4px 8px;
+}

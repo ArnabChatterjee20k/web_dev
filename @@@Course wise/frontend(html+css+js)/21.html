@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+    .container{
+        /* height: 540px; */
+        /* if height of container is mentioned then on wraping flex items the items will go out of container */
+        
+        border: 2px solid black;
+        display: flex;
+        /* will make all elements inside the  conatiner flex and by default they inherit the height of their parnet class(here it is container) */
+        
+        /* Flex properties for flex containers*/
+        
+         flex-direction: row;  /*by default*/
+         /* flex-direction: column;  will place elements column wise */
+         /* flex-direction: row-reverse;will start filling the contnets from opposite side  */
+         /* flex-direction: column-reverse; */
+        
+        flex-wrap: wrap;
+        /* will make the container responsive. */
+        /* by default it is no wrap */
+        
+        flex-wrap: wrap-reverse;
+        /* it will wrap in reverse direction */
+
+        /* wrap aautomatically fit the content with increase in screen size or decrease in screen size */
+
+        
+        /* shorthand for writing flex direction and wrap */
+        flex-flow: row wrap;
+
+        justify-content: center;/* automatically cnetres the content */
+        justify-content:space-between;/* give equal space between the items(start and end are excluded) */
+        justify-content: space-evenly;/* give equal space including start and end */
+        justify-content: space-around;/* give equal space between boxex but not equal space on start and end.It actually inrease the space of a box on left and right.So the start and are small spacing but between boxes it increases */
+
+        align-items: center;
+        /* align items vertically centre */
+        
+        align-items: flex-end;
+        /* align items vertically downward */
+       
+        align-items: flex-start;
+        /* align items vertically upward.It is default */
+        
+        align-items: stretch;
+        /* evenly space between items vertically */
+
+        
+
+    }
+    /* Now the container is flex container and the items are flex items */
+    .item{
+        height: 358px;/* to overwrite the height their default height(inherited by their parent class) */
+        border: 2px solid green;
+        width: 385px;/* max width will be upto the container width.total sum of width of all the items will be upto container width*/
+        background-color: tomato;
+    }
+
+    #item1{
+        /* order detemines which object will zppear first. Higher order will appear at last.If order not specified then that element will apppear first. If 2 or more not specified then appear in their actual order as per the code. */
+        /* order: 3; */
+
+        /* flex-grow: 100; */
+        /* when you try to increase the screen size then the item will increase and take size of proportion 100.
+        No negative values as negative is invalid. */
+
+        /* flex-shrink: 3; */
+        /* Here it is used for decrease during decreasing screen size. */
+
+        /* Grow and shrink. must used to target particular elemnt instead of using in class.If used in claSS then every will have flex grow and flex shrink same value. Flex grow and shrink are just like ratings. The element /item having higher value they will reflect much that property. */
+
+        
+        
+        flex-basis: 420px;
+        /* It is used to set the size of flex item. If flex direction is set to row width will increase and if column then height will increase */
+
+
+        /* shorthand for flex */
+        /* grow shrink and shrink of flex */
+        flex:2 2 344px;
+
+        /* another is used in item2 */
+        
+    }
+    #item2{
+        order: 40;
+        
+        align-self: flex-end;
+        /* It align to end and if flex start then align to beginning and centre for center */
+    }
+    #item3{
+        order: 2;
+    }
+    #item4{
+        order: 1;
+    }
+
+    </style>
+
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <div class="container">
+        <div class="item" id="item1">First</div>
+        <div class="item" id="item2">Second</div>
+        <div class="item" id="item3">Third</div>
+        <div class="item" id="item4">Fourth</div>
+
+    </div>
+</body>
+</html>
+

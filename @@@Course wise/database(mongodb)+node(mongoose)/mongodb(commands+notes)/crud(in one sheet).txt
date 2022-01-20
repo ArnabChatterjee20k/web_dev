@@ -1,0 +1,14 @@
+//If used one then only on 1st matching field
+// If used Many used operation will done every matching field 
+ 
+
+create==== db.items.insertOne({name:"samsung",price:22000,ratings:5,sold:100}) 
+           db.items.insertMany([{name:"samsung",price:22000,ratings:5,sold:100},{name:"apple",price:220000,ratings:3,sold:1000}]) 
+
+read=====  db.collectionname.find({filter})
+
+update==== db.items.updateOne( {filter(s)} , {$set{update(s)} } ) 
+           db.items.updateMany( {filter(s)} , {$set{update(s)} } )
+
+delete ==== db.items.deleteOne({filter(s)}) 
+            db.items.deleteMany({filter(s)})

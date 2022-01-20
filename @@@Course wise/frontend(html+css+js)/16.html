@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo selectors & Styling links and buttons</title>
+    <style>
+        .container{
+            border: 2px solid purple;
+            background-color: rgb(245, 208, 203);
+            padding: 34px;
+            margin: 34px auto;
+            width: 666px;
+        }
+        .btn{
+            background-color: sandybrown;
+            padding: 6px 6px;
+            border: none;
+            cursor:pointer;
+            /* Initially curson was coming in button not on link but after curson attribute on both cursor will ppear */
+            font-size:13px;
+            border-radius:40px;
+        }
+
+        a{
+            text-decoration:none;
+            /* To clear the underline of link */
+        }
+        
+        /*Pseudo selector  */
+        a:hover{
+            color: turquoise;
+            
+        }
+        a:visited{
+            background-color: yellow;
+            /* After visiting the link,next time the coolor */
+        }
+        .btn:active{
+            background-color: teal;
+            font-style: italic;
+            font-weight: bold;
+            /* While the object is pressed/hold   */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, saepe porro voluptate voluptatum totam minus minima quae perspiciatis, corporis nisi suscipit numquam optio nam aspernatur, tempore impedit doloribus est. Modi, explicabo soluta?</p>
+        <a href="https://google.com" class="btn">Read more</a>
+        <button class="btn">Contact us</button>
+    </div>
+    
+</body>
+</html> 

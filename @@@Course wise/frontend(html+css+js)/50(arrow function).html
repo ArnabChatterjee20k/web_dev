@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <div class="container">
+        Thsi cont
+    </div>    
+    <script>
+        // Arrow function is a shortcut used for function
+
+        // Normal
+        function greet(){
+            console.log("HI")
+        }
+
+        // Arrow
+        greet1 = () =>{
+            console.log("Hellow")
+        }
+        
+        greet();
+        greet1();
+
+
+
+        let sum= (a,b)=>{
+            return a+b;
+        }
+        // shortcuts
+        let sum1=(a,b)=>a+b;
+
+        let half=a => a/2;//we dont have to give bracket around a. But if their was 2 elements we have to use ()
+
+        let salut=()=> console.log("asas")
+        
+
+        // using arrow in settimeout
+        setTimeout(() => {
+            console.log("Hlo")
+        }, 1000);
+        
+        // In JavaScript, ‘this’ normally refers to the object which ‘owns’ the method, but it depends on how a function is called. If there’s no current object, ‘this’ refers to the global object.
+        let obj1={
+            greeting:"hello",
+            names:["Arnab","asas","asasa","Asasdhg"],
+            speak(){
+                this.names.forEach((student)=>{
+                    console.log(this.greeting,student);
+                })
+            }
+        }
+
+        // But the ouput will be different if we use normal function and undefined will be coming
+
+        obj1={
+            greeting:"hello",
+            names:["Arnab","asas","asasa","Asasdhg"],
+            speak(){
+                this.names.forEach(function s(student){
+                    console.log(this.greeting,student);
+                })
+            }
+        }
+
+        obj1.speak();
+        // This variable is normally used to point the variable inside the function. But in the case of arrow functions, it points the variable outside the function. This is known as lexical this.(greeting inside obj1 that is this ofparent )
+
+        // But normal function search inside it.
+    </script>
+</body>
+</html>

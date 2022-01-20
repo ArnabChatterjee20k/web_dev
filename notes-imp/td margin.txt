@@ -1,0 +1,1 @@
+nternal table elements generate rectangular boxes with content and borders. Cells have padding as well. Internal table elements do not have margins.

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> setInterval & setTimeOut</title>
+</head>
+<body>
+    <div class="container">
+        This is a container
+    </div>
+    
+    <script>
+        // running a function in a regular duration
+        // settimeout==> Allows us to run the function once after the interval of time
+        // clearTimeout==>  Allows us to run the function repeatedly after the interval of time
+
+        function greet(name){
+            console.log("hellow "+name)
+        }
+        
+        // to run function greet once after 5s
+        setTimeout(greet, 5000,"Arnb");//5000ms=5s and Arnab is  the parameter ogf the function. So we have to give function name, time(in milisecond and arguments if any(can be multiple timeout))
+
+        // setTimeout(greet, 5000,name="Arnb");//5000ms=5s
+
+        //  if we use greet() it will not work and instantly run the function. 
+        // We cant call the function we have to use function name.
+
+        timeOut=setTimeout(greet,5000,"Arnb");
+        console.log(timeOut);
+
+        clearTimeout(timeOut);
+
+
+    </script>
+</body>
+</html>

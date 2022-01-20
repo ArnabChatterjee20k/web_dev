@@ -1,0 +1,167 @@
+/* about lightning 
+
+in floor we want the center to be bright and
+when go away it will be darker
+
+in top front left right back shadow will be inset 
+but bottom not inset as it is touching the floor and shadow will 
+be casted  on the floor
+*/
+
+/* 
+about animation
+
+when we rotate the scene we will see that the ball is just a flat circle.
+SO to solve it we will add the same animation scene_Rotate but in reverse
+as then the ball in rotaing the counter direction of scene .
+So it will be appearing like a sphere
+
+in ball animation first it's ease out then when 50% it beomes ease in.
+*/
+
+:root{
+    --boxColor : #0ff7;
+    --rotate_Speed : 30s;
+    --bounce_speed : 1.5s
+}
+
+body{
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    /* font size will be acting as a varible for widths and heights using em.  */
+    perspective: 10em; /* the distance from the origin. Means it will be like that we are looking at it from a far point.*/
+    perspective-origin: 50% calc(50% - 2em); /* to give the sight of vision an like we are seeing a tower */
+
+    overflow: hidden; /* to simulate collision effect of box */
+}
+
+.scene{
+    position: relative;
+    transform-style: preserve-3d;
+    animation: scene_Rotate var(--rotate_Speed) infinite linear;
+}
+
+@keyframes scene_Rotate {
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+.ball{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: lightblue;
+
+    position:absolute;
+    left: -.5em ; /* to make ball in center  */
+    bottom: 1em; /* ball will bounce */
+    background-image: radial-gradient(
+        circle at top,
+        lightblue,
+        #000
+        /* lightblue,50%,#000 here 50% is for ligtning. we can control it. But here we dont require it */
+        );
+    
+    animation: ball_bounce var(--bounce_speed) infinite ease-out,
+        scene_Rotate var(--rotate_Speed) infinite linear reverse;
+}
+
+@keyframes ball_bounce {
+    0%,100%{bottom: 0.5em;}
+    50%{bottom:3em; animation-timing-function: ease-in;}
+}
+
+.ball-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#0007 , #0000 50%);
+    animation: ball_shadow var(--bounce_speed) infinite ease-out
+}
+
+@keyframes ball_shadow {
+    0%,8%,93.5%,100%{transform: scale(1); opacity: 1;}
+    50%{transform: scale(2); opacity: 0.5; animation-timing-function: ease-in;}
+}
+
+.cube{
+    width: 2em;
+    height: 2em;
+    
+    position:absolute;
+    bottom: -1em;
+    left: -1em;
+    transform-style: preserve-3d;
+    animation: cube_collison var(--bounce_speed) infinite linear;
+}
+
+@keyframes cube_collison {
+    0%, 100% { height: 1.5em; }
+    8%, 93.5% { height: 2em; }
+}
+
+
+.right , .left ,.front, .back{
+    position:absolute;
+    background-color: var(--boxColor);
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0.5rem #000a inset ;
+}
+
+.front{
+    transform:translateZ(1em); /* to move it forward */
+}
+.right{
+    transform: rotateY(90deg) translateZ(1em);
+}
+.back{
+    transform: rotateY(180deg) translateZ(1em);
+}
+.left{
+    transform: rotateY(270deg) translateZ(1em);
+}
+
+.top{
+    position:absolute;
+    background-color: var(--boxColor);
+    width: 2em;
+    height: 2em;
+    /* Not 100% since we dont want to change 
+    it's height and width when we animate the cube */
+    transform: translateY(-50%) rotateX(90deg);
+    box-shadow: 0 0 0.5rem #000a inset ;
+}
+.bottom{
+    position:absolute;
+    background-color: #0007;
+    width: 2em;
+    height: 2em;
+    bottom: 0;
+    transform: translateY(50%) rotateX(90deg);
+    box-shadow: 0 0 0.5rem #000a;
+    /* here not inset as the shadow will come
+     outside when it touches the floor */
+}
+
+.floor{
+    position:absolute;
+    width: 15em;
+    height: 15em;
+    background-image: 
+        radial-gradient(#0000 ,#000 75%),
+        repeating-conic-gradient(
+            from 45deg,
+            #111 0deg 90deg,
+            #222 90deg 180deg);
+    background-size: 100%,1em 1em;
+
+    transform: translate(-50%,50%) rotateX(90deg);
+    top: -14em;
+}
+

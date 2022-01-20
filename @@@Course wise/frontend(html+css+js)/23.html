@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query</title>
+    <style>
+        .box{
+            font-size: 72px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            display: none;
+        }
+        @media(max-width:200px){
+            #box-1{
+                /* from min screenwidth 0px to 200px */
+            display:block;
+            background-color: cyan;
+            }
+        }
+
+        @media (min-width:200px)and (max-width:500px){
+            #box-2{
+            display:block;
+            background-color: green;
+            }
+        }
+
+        @media(min-width:500px)and (max-width:800px){
+            #box-3{
+            display:block;
+            background-color: teal;
+
+            }
+        }
+
+        @media(min-width:800px){
+            #box-4{
+            display:block;
+            background-color: tomato;
+            }       
+        }
+        
+            
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">I am iphone</div>
+    <div class="box" id="box-2">Tbalet</div>
+    <div class="box" id="box-3">Desktop</div>
+    <div class="box" id="box-4">Wide screen</div>
+</body>
+</html>
+<!-- Media query is a method to create responsive web designs 
+if we want to change/inject css when screen is resized then it helps us -->
+
+<!-- We use “media only screen ” to restrict the CSS rules to a specific media screen such as mobile, desktop etc. There are many various types of media such as print, screen etc. We may use media rules to specify different CSS rules for different screen sizes such as different CSS rules for different devices. -->
+
+<!-- @media only screen This means we will apply css styles to a device with a screen. The keyword only used here to hide style sheets from older browsers from seeing phone style sheet. and (min-device-width: 320px) and (max-device-width: 480px) -->

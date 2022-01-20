@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tooltip</title>
+    <style>
+        a[data-tool-tip]{
+            position: relative;
+        }
+
+        a[data-tool-tip]::after{
+            content: attr(data-tool-tip);/* The attr() CSS function is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on pseudo-elements, in which case the value of the attribute on the pseudo-element's originating element is returned. */
+            position:absolute;
+            display: block;
+            background-color: grey;
+            padding: 1em 3em;
+            border-radius: 5px;
+            font-size: .75em;
+            bottom: 0;
+            left: 0;
+            white-space: nowrap;
+            transform: scale(0);
+            transition: 
+            transform ease-out 150ms,
+            bottom ease-out 150ms
+            ;
+        }
+
+        a[data-tool-tip]:hover::after{
+            transform: scale(1);
+            bottom: 100%;
+        }
+    </style>
+</head>
+<body>
+    <p class="tool">
+        Lorem ipsum <a href="#" data-tool-tip="cool tool tip">dolro</a> dolor sit amet consectetur adipisicing elit. Eius consequuntur ad doloremque molestias mollitia aut adipisci voluptatum maiores ipsum aperiam ut repellendus, veniam nisi labore rerum ab dolor quo harum!
+        Beatae vero animi autem molestias. Animi, culpa deleniti. Veniam cum ipsum vel rem voluptates tempora accusantium quas perferendis earum itaque aliquam, officiis obcaecati distinctio nihil blanditiis autem aliquid sint! Eaque?
+        Quidem, dolorum! Voluptatum numquam qui iusto deleniti facere illum recusandae ut veniam explicabo eligendi repudiandae, odit harum doloribus tempore, debitis praesentium ad? Animi ducimus, aliquam tempora exercitationem est cum vitae.
+        Doloribus dolore quaerat at quisquam repellendus quasi ut nulla tempora, enim autem, repudiandae minus obcaecati dolor veritatis odio sunt atque delectus omnis hic ad laboriosam nihil? Ut dolor facere quae.
+        Natus qui alias, aspernatur sed dolore quis assumenda sequi quod itaque. Saepe, in quisquam officiis corporis tempore dignissimos eveniet neque tenetur tempora a, asperiores voluptatem, labore reiciendis corrupti quod! Quidem.
+        Illum quaerat, cumque culpa at repellendus sed consequuntur incidunt eaque ab aliquam molestiae deserunt necessitatibus pariatur vel ullam magni blanditiis ducimus nulla fugiat aspernatur eos ea illo quisquam qui! Consectetur.
+        Sit iure, ullam dolore minus, provident quam deleniti harum delectus aspernatur ex saepe maxime consequatur. Voluptatibus doloremque, repellendus maxime impedit repellat eligendi possimus accusamus enim nostrum, voluptates, reprehenderit quo hic?
+        Veritatis, facere voluptatem! Ipsa laudantium sapiente et aspernatur quidem quis voluptates, corrupti, repellat atque eum, commodi debitis officiis quisquam cupiditate sunt mollitia nobis corporis ipsum reiciendis natus ullam adipisci sit?
+        Similique maiores, nihil, quia earum exercitationem vitae vel quisquam maxime quidem eos et aliquid ipsum rerum eveniet unde id doloribus? Ullam minima dolores, veritatis saepe doloremque labore animi voluptate accusantium?
+        Quod doloribus eaque magnam unde optio! Mollitia esse, sunt ut facilis ab similique. Eveniet dicta, assumenda inventore rem quam dolores harum facilis! Dolor, quibusdam assumenda enim a inventore amet dolores.
+    </p>
+</body>
+</html>

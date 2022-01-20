@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    Arnab
+    <script>
+        let jsononj={
+            name:"Arnab",
+            lang:"js",
+            class:"12",
+            topic:"json"
+        }
+        console.log(jsononj)
+
+        // from object to string and we can perform string operations of string on it.
+        let myjsonstr=JSON.stringify(jsononj);
+        console.log(myjsonstr);
+
+        // replacing values 
+        myjsonstr=myjsonstr.replace("12","11");
+
+        console.log(myjsonstr);
+        
+        
+        // converting to json and it must be a valid json string to parse otherwise error
+        myjsonstr=JSON.parse(myjsonstr)
+        console.log(myjsonstr);
+        
+    </script>
+    
+</body>
+</html>
+<!-- 
+
+It is used to transport data over network
+    What is JSON?
+
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data-interchange format
+JSON is language independent
+JSON is "self-describing" and easy to understand
+The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. The code for reading and generating JSON data can be written in any programming language.
+ -->

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope </title>
+</head>
+<body>
+    <!-- Emmet abbrebiation -->
+    <!-- div>ul>li{Item-$}*7 --> 
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+        </ul>
+    </div>
+    <script>
+        var s1="This is string1";
+        var s1="This is string2";
+        console.log(s1);
+        
+        //we can redelcare the value of a variable made using var which can create serious trouble as it creates global scope variables.
+
+
+        //let better than var keyowrd.
+        let a="Arnab";
+        // let a="Arna";//we will get problem here as we declare a variable with let. But same problem doesnot provide problem in var keyword which can be modified anytime. So let  is better altenative.
+        {
+            let a="arnab";
+            console.log(a);// this a inside this block is block scope and it has no existence outside the block.
+        }
+        console.log(a);//global variable a
+        // var has global scope but let has block level("{}")scope
+
+        //constant
+        const b="aasasarnab"
+        console.log(b);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariokart Animation</title>
+    <style>
+        .mario{
+            position:absolute;
+            top: 40px;
+            left: 0px;
+            animation-name: drive;
+            animation-delay: 1s;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            /* to iterate the animation */
+        }
+
+        .mario1{
+            position:absolute;
+            top: 200px;
+            filter: sepia(70%) saturate(40%);
+            animation-name: drive;
+            animation-delay: 1s;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;/* to chnage direction preridically */
+            /*animation-direction: reverse;to change direction.Here it will be to then from */
+        }
+        /* keyframes */
+        @keyframes drive{ 
+            from{transform: translateX(300px);}
+            to{transform: translateX(1000px);}
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="mario.png" alt="Notfound" class="mario">
+    </div>
+    
+    <div>
+        <img src="mario.png" alt="Notfound" class="mario1">
+    </div>
+</body>
+</html>

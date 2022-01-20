@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code world</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+        
+        header::before{
+            background: url("https://source.unsplash.com/1600x900/?food") no-repeat center center/cover;
+            content:" ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            /* max value is 1.It is use to maintain light of the image  */
+
+        }
+
+        .navigation{
+            font-size: 20px;
+            display: flex;
+        }
+
+        li{
+            list-style: none;
+            padding: 24px;
+        }
+        section{
+            margin: 3px 230px;
+            display: flex;
+            flex-direction: column;
+            height: 344px;
+            justify-content: center;
+        }
+
+        h3{
+            font-size: 4rem;
+            margin: auto;
+            
+        }
+        p{text-align: center;}
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h3>Welcome to coding world</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore dolore qui aliquam vero, consequuntur facere totam voluptatibus sit excepturi accusamus.</p>
+    </section>
+</body>
+</html>
+
+<!-- If image is added in the body then we cant apply the styles as per the requirement.
+But we have used header before.To make the conrtent stylish.We have applied height and width here -->

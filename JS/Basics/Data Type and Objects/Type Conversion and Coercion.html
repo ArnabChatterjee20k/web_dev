@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Type Conversion & Coercion</h1>
+    <h3>
+        JavaScript is a programming language used to build dynamic web pages. In this language, we do not have to specify the data type when we declare it. We can assign new data of a different type to the same variable. Under some circumstances, JavaScript will perform automatic type conversion. Typecasting/Type conversion and coercion in simple terms means changing the data type of a value to another data type like an integer to string, Boolean into String, etc.
+    </h3>
+
+    <h1>JavaScript Type Conversion:- </h1>
+    <p>
+        When we convert one data type to another data type, this process is called type conversion. In JavaScript, there are two types of type conversion:
+    </p>
+    <p>
+        <h1>Explicit conversion</h1>
+        The type conversion that we manually do is known as explicit type conversion. In JavaScript, explicit type conversions are done using the built-in methods like String (), Number(), etc.
+
+        <ul type="circle"><li><h3>Number Conversion:-</h3></li></ul>
+        <li>To convert Boolean values or numeric strings to numbers, we use the Number() i.e. an in-built method. Number() method in case of empty strings and null values return 0. If a string is an invalid number like having an alphabet in a string, the result will be NaN. </li> 
+
+        <h3>Value and their return</h3>
+        <li>undefined will return NaN</li>
+        <li>For null 0</li>
+        <li>For true and false 1 & 0</li>
+        <li>For string--
+            <p>Whitespaces from the start and end are removed. If the remaining string is empty,</p>
+            <p>
+                the result is 0. Otherwise, the number is “read” from the string.  If the string contain any alphabet like 67a90, it will give NaN error.
+            </p>
+        </li>
+
+        <ul  type="circle"><li><h3> Boolean Conversion:-</h3></li></ul>
+        <li>
+            Boolean type conversion happens in logical operations. It also follows the rules, but they are mostly obvious:
+
+            NaN, 0, undefined, null, "" are converting to false
+            everything else, including objects, to true
+        </li>
+
+        <ul  type="circle"><li><h3> String Conversion:-</h3></li></ul>
+        <li>
+            The method String() is used to convert numbers to strings. It can be used on any type of numbers, literals, variables, or expressions. The method toString() does the same.
+            <li>
+                <strong>parseInt and parseFloat:-</strong>The in-built method parseInt() and parseFloat() return numbers from strings that start with numeric data. Here is an examples:
+            </li>
+
+        </li>
+
+    </p>
+
+    <p>
+        <h1>Implicit Conversion:-</h1>
+        <p>Sometimes JavaScript automatically converts one data type to another. This type of conversion is known as implicit conversion.</p>
+        
+        <ul  type="circle"><li><h3> Conversion To String:-</h3></li></ul>
+        <li>
+            When we add a number into a string, JavaScript converts the number to a string before concatenation. Here is an example:
+        </li>
+        
+        <ul  type="circle"><li><h3> Conversion To Number:-</h3></li></ul>
+        <li>
+            Numeric string used with operators like +, - , / , * returns number type
+        </li>
+
+        <ul  type="circle"><li><h3> Boolean Conversion to Number:-</h3></li></ul>
+        <li>
+            If we use Boolean, true is considered as 1 and false is considered as 0.
+        </li>
+    </p>
+    <script>
+        // Type conversion 
+console.log('Welcome to tut5');
+let myVar;
+myVar = String(34);
+// console.log(myVar, (typeof myVar));
+let booleanVar = String(true);
+// console.log(booleanVar, (typeof booleanVar));
+
+let date = String(new Date());
+// console.log(date, (typeof date));
+
+let arr =  String([1,2,3,4,5]);
+// console.log(arr.length, (typeof arr));
+
+let i = 75;
+// console.log(i.toString())
+
+let stri = Number("3434");
+stri = Number("343d4");
+stri = Number(false);
+stri = Number([1,2,3,4,5,6,7,8,9]);
+// console.log(stri, (typeof stri));
+
+let number = parseFloat('34.098');
+
+
+console.log(number.toFixed(2), (typeof number));
+
+// Type coercion
+
+let mystr = Number("698");
+let mynum = 34;
+
+console.log(mystr + mynum);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+// show dbs #to see all db
+
+// use ecart #to create a database ecart and if it is present it will use that
+
+
+-----Inserting data
+
+//  db.items.insertOne({name:"samsung",price:22000,ratings:5,sold:100})  
+#items is a collection and inside we have inserted a document {name:"samsung",price:22000,ratings:5,sold:100}.TO insert one document.
+
+// db.items.insertMany([{name:"samsung",price:22000,ratings:5,sold:100},{name:"apple",price:220000,ratings:3,sold:1000}]) 
+#To insert many document at one time
+
+
+// show collections  
+
+#Here we have inserted 2 samsung but mongo will give them 2 diffeerent ids. _id field as the primary key for the collection so that each document can be uniquely identified in the collection. 
+
+# No schema is maintained
+we can insert random field in a collection evenif it is also not present in other collection. For example
+
+db.items.insertOne({name:"samsung",price:22000,ratings:5,sold:100, good:"yes"}).
+
+#we can also write this :-
+#db.items.insertOne ( {"name":"Arnab",class:"12"} )
+
+#Good is only present here not in other items.So no schema is enforced unlike mysql.
+
+
+---- Querying/searching for data in mongo db
+
+//db.items.find() #to see all the objects
+
+Inside find  we can give filter objects
+
+//db.items.find({name:"apple"}) #to find the object whose name has apple. {name:"apple"} is the filter object.Basically we are filetering the data
+
+// db.items.find({ratings:{$gt:3}}) # itemas having rating greater than  3
+
+// db.items.find({ratings:{$gte:3}}) # itemas having rating greater than equal to 3
+
+#And operator(,)
+db.items.find({ratings:{$gte:3},name:"apple"})
+
+#for less than ==== lt
+db.items.find({ratings:{$lt:3},name:"apple"})
+
+#lte means less than less than equal
+db.items.find({ratings:{$lt:3},name:"apple"})
+
+#OR operator($or:[])
+
+//{ $or: [ { <expression1> }, { <expression2> }, ... , { <expressionN> } ] }
+
+//db.items.find({ $or: [ { <expression1> }, { <expression2> }, ... , { <expressionN> } ] })
+
+db.items.find( { $or: [ { rating:{$lte:3} }, { good:"yes" } ] } )
+
+
+----- Deleting data from MongoDB
+#db.items.insertMany([ {"name":"Arnab",class:"12"},{"name":"Bittu",class:"10"}  ])
+
+db.items.deleteOne({"name":"Arnab"})
+#It will delete the matching documnet entry and the first entry in case of multi document
+
+db.items.deleteMany({"name":"Arnab"})
+#It will delete all the matching documnets. It will also return the number of documnets deleted
+
+
+
+-----Updating data in mongo MongoDB
+#db.items.updateOne( {filter(s)} , {$set{update(s)} } )
+
+db.items.updateOne({name:"samsung"},{$set:{price:30}})
+
+db.items.updateMany({name:"samsung"},{$set:{price:30}})
+
+db.items.updateMany({name:"apple"},{$set:{price:30,ratings:10}}) #multiple data updatation
+
+

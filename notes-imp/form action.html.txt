@@ -1,0 +1,1 @@
+The formaction attribute is only used for buttons with type="submit".

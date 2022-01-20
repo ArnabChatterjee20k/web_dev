@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analogclock</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    <div id="clockcontainer">
+        <div id="hour"></div>
+        <div id="min"></div>
+        <div id="sec"></div>
+    </div>
+
+
+    <div class="btncontainer">
+        <input type="number" id="hr_inp" class="time" min="1" max="12" placeholder="ENTER HOURS TO ADD">
+        <input type="number" id="min_inp" class="time" min="0" max="60" placeholder="ENTER MINUTES TO ADD">
+        <button id="btn" class="time">Change</button>
+    </div>
+<script src="clock.js"></script>
+</body>
+</html>

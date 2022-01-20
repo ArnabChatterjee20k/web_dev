@@ -1,0 +1,77 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial: for, while, forEach, Do While Loops </title>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus in fugit voluptatum quam corrupti! Quod amet deleniti quaerat ad laboriosam autem, inventore quia quo blanditiis veritatis, culpa incidunt nulla nemo!</p>
+
+    <script>
+        console.log("Lets start looping")
+
+        let i=0;
+        for(i=0;i<3;i++){
+            // i=0 is the sttarting index
+            // i<3 is condition
+            // i++ is same as i+=1 which is used for increamentation
+            // loop will run till condition is satisfied
+            console.log(i);
+        }
+        console.log("Array")
+        let name=["A","c","sa","as"]
+        name1=""
+        for(index=0;index<name.length;index++){
+            console.log("Index",index,"=>",name[index]);
+            name1+=name[index];
+        }
+        console.log(name1)
+
+        //  using modern js 
+        // forEach loop 
+        console.log("loop using modern js")
+        name.forEach(function f(element){
+            console.log("hi"+element)
+        });
+        // forEach explained in next file(for each.js)
+
+        // for of loop
+        for(element of name){
+            console.log("Made using for of loop "+element);
+        }
+
+        //iterating over object
+        // for in loop
+        console.log("forin loop======");
+        let employee={
+            name:"Arnab",
+            age:12,
+            "channel 1":"No"
+        };
+
+        for (k in employee){
+            console.log(k,"is",employee[k]);
+        }
+
+        //while loop
+        console.log("While lop======")
+        let counter=0
+        while(counter<4){
+            console.log(`counter is ${counter}`);
+            counter++;//updating counter by increamenting it by 1
+        }
+        
+        //do while loop
+        let counter1=0
+        console.log("Do While lop======")
+        do {
+            console.log(`counter1 is ${counter1}`);
+            counter1++; 
+        } while (counter1<4);
+        // In do while loop 1time the loop will run whether the condition satisfies or not
+    </script>
+    <!-- <script src="46(for each loop).js"></script> -->
+</body>
+</html>

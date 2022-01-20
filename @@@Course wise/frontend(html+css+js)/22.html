@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font size units(em, rem, vh and vw) + Responsive design</title>
+
+    <style>
+
+        html{
+
+            font-size: 25px;
+        }
+        .container{
+            font-size: 10px;
+            border: 2px solid red;
+            /* width: 400px;
+            height: 300px; */
+            
+            /* vh(viewport height) and vw(viewport width) */
+            
+            /* View port height means height relative to height of visible screen. If we want to cover whole screen height then we can use 100vh which means whole screen height instead of manually setting the height.  */
+
+            height: 100vh;
+
+
+            /* Similaly view width maintains width */
+            width: 100vw;
+
+        }
+        h1{
+            text-align: center;
+        }
+
+        #first{
+            /* em unit */
+            /*  em unit means font resizing with respect to their parent conatiner font size.3 em 3 times their parent container. Here it will be (3x10)px=30px*/
+            
+            /* font-size: 3em; */
+            /* padding: 3em;Here padding will be 3 times of the font size not of the parent since font size is metioned separately in id first.Here it will be  (3x30)px=90px */
+            }
+
+            /* we can see how much font size and all other things in computed tab in dev tools in browser */
+
+            /* em is used when we want an element is modified according to the container.  */ 
+
+
+            /* rem unit */
+            /* rem unit means font resizing with respect to the base html font size  */
+
+            #second{
+                /* font-size: 3rem; */
+                /* 3 times base html font size. Here 3x25px=75px  */
+
+                /* padding:3rem; */
+                /* Here padding will be also 75px.Unlike em it is not based id font size. Base html will be always considered in font as well as padding */
+                
+                /*It is used we will likely to keep the html font size relatively. */
+            }
+
+            
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="third">This is third heading</h1>
+    </div>
+</body>
+</html>

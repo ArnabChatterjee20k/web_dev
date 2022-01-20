@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card1</title>
+    <style>
+        /* THE MAINCONTAINER HOLDS EVERYTHING */
+        .maincontainer{
+            position: relative;
+            width: 250px;
+            height: 320px;
+            /* background-color: rgb(96, 223, 96); */
+        }
+
+        /* THE CARD HOLDS THE FRONT AND BACK FACES */
+        .thecard{
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            transform-style:preserve-3d ; /*If we remove this then the back will not be visible as it will act as 2d. preserve 3d is like sandwich bread one top and other bottom. With 2d only top will rotate but with 3d whole sandwich will rotate */
+            transition: all 0.5s ease;
+            background: rgb(255, 255, 37);
+        }
+
+        .thecard:hover{
+            transform: rotateY(180deg);
+        }
+
+        .thefront{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden ;/* Keep it visible will make a flickering while rotating   */
+            background: rgb(38, 44, 25);
+            color: darkgrey;
+        }
+        .theback{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* backface-visibility: hidden ;     */
+            background: rgb(199, 209, 180);
+            color: darkgrey;
+            transform: rotateY(180deg);
+        }
+        </style>
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="thecard">
+            <div class="thefront">Front card</div>
+            <div class="theback">Back card</div>
+
+        </div>
+    </div>
+</body>
+</html>

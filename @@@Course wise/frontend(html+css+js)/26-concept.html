@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after pseudo selectors</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            background: url("https://source.unsplash.com/1600x900/?food") no-repeat center center/cover;
+        }
+
+        .navigation{
+            font-size: 20px;
+            display: flex;
+        }
+
+        li{
+            list-style: none;
+            /* to remove the bullets */
+            padding: 24px;
+        }
+        section{
+            margin: 3px 23px;
+            display: flex;
+            flex-direction: column;
+            /* if row mentioned then they will appear horizonatlly */
+            
+            height: 344px;
+            /* border: 2px solid red; */
+            align-items: center;/* to align horizontally center */
+            justify-content: center;/* to align vertically center */
+        }
+
+        h3{
+            font-size: 4rem;
+            
+        }
+        p{text-align: center;}
+        /* before pseudo selector. */
+        /* Content will be inserted before section */
+        section::before{
+            content: "this is a content before section";
+        }
+        /* after pseudo selector. */
+        /* Content will be inserted after section */
+        section::after{
+            content: "this is a content after section";
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h3>Welcome to coding world</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore dolore qui aliquam vero, consequuntur facere totam voluptatibus sit excepturi accusamus.</p>
+    </section>
+    <hr>
+</body>
+</html>

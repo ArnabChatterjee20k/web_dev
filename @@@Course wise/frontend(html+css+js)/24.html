@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors</title>
+    <style>
+
+        h1{
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* all p inside div including the p inside list inside div not outside p */
+        div p{
+            color: yellow;
+            background-color: green;
+            font-weight: bold;
+        } 
+
+        /* only p inside li inside div.In above all are getting effected including this one.But here this is only getting afffected */
+        div li p{
+            background-color: cyan;
+        }
+
+        /* For direct child of div means which are present directly inside div or p is present right inside div. If p is present inside li inside div it will not be applicable.    */
+        div>p{
+            font-size: 100px;
+        }
+        
+        /* For elements whose previous element is div.OR whose previous sibling is div.The outermost paragraph is present inside body and has a previous sibling: 
+        If p is present after div or p is the next sibling of div*/
+        div+p{
+            color:white;
+            background-color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>This another para inside list</p></li>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outermost paragarph </p>
+</body>
+</html>

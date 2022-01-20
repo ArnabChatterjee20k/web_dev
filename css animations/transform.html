@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .box{
+            width: 100px;
+            height: 200px;
+            background-color: brown;
+            border: 4px solid green;
+
+            transform: translateX(400px);/* to move object */
+            
+            /* transform: scaleX(12);To scale element */
+            
+            transform:rotateX(86deg);/*In 90deg along X-axis and Y-axis it will be invisible as it will be a flat shape  */
+
+            transform: rotateZ(45deg);
+
+
+            /* using all of them together */
+            transform: rotateZ(60deg) scaleY(2) translateY(70px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css grid</title>
+    <style>
+        .container{
+            display: grid;
+
+            /* just type gtc to get the suggestion */
+            /* grid-template-columns: 300px 100px 100px;3 columns of 300px 100px and 100px */
+            
+
+            /* grid-template-columns: 100px auto auto; */
+
+            /* grid-template-columns: 1fr 4fr 1fr; */
+
+            /* fr means fraction */
+            /*assign 1th part of total width to first 
+            4th part to 2nd
+            1th part to third*/
+            /* divide screen in the ratio 1:4:1.2nd is 4times the first and second*/
+
+            grid-template-columns: repeat(10, auto);
+            /* 6 columns of width auto */
+
+            grid-gap:2rem;
+            /* create between grid */
+        }
+
+        .item{
+            /* height: 100px; */
+            /* width: 80px; */
+            /* Removed height to make the view more clear */
+
+            /* make width less than grid template columns of item otherwise it will get collapsed */
+            background-color: rgb(223, 199, 199);
+            /* margin: 3px; */
+            margin: 15px 15px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+        <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div>
+        <div class="item">Item4</div>
+        <div class="item">Item5</div>
+        <div class="item">Item6</div>
+    </div>
+</body>
+</html>

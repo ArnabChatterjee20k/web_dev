@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(99, 99, 177);
+}
+.wrapper{
+    width: 430px;
+    padding: 30px;
+    background-color: #fff ;
+    border-radius: 5px;
+}
+.wrapper header{
+    color:rgb(99, 99, 177) ;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+.wrapper form{
+    height: 167px;
+    border: 2px dashed rgb(99, 99, 177);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    cursor: pointer;
+
+}
+form :where(i,p){
+    color: rgb(99, 99, 177);
+}
+form p{
+    font-size: 16px;
+    margin-top: 15px;
+}
+section .row{
+    background: rgba(214, 214, 255, 0.829);
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .row i{
+    font-size: 30px;
+    color: rgb(99, 99, 177);
+}
+section .row .content{
+    width: 100%;
+    margin-left: 15px;
+}
+.progress-area .row .content{
+    width: 100%;
+    margin-left: 15px;
+}
+section .details span{
+    font-size: 14px;
+}
+.progress-area .details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+.progress-area .progress-bar{
+    height: 6px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 30px;
+}
+.progress-bar .progress{
+    height: 100%;
+    width: 0%;/* through this only the progress will be done */
+    background: rgb(99, 99, 177);
+    border-radius: inherit;
+}
+.uploaded-area{
+    max-height: 150px;
+    overflow-y:scroll ;
+}
+.uploaded-area::-webkit-scrollbar{
+    width: 0px;
+}
+.uploaded-area .row .content{
+    display: flex;
+    align-items: center;
+    
+}
+.uploaded-area .row .details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    
+}
+.uploaded-area .details{
+    font-size: 11px;
+    color: #404040;
+}
+.uploaded-area .fa-check{
+    font-size: 16px;
+    color: rgb(241, 161, 69);
+}

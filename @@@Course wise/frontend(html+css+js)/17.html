@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <style>
+        
+        .navbar {
+            background-color: rgb(32, 1, 1);
+            border-radius: 36px;
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            /* targetting list of navbar class */
+            float: left;
+            list-style: none; /* To remove bullets */
+            margin: 13px 3px;
+            padding-top:14px; 
+        }
+        .navbar li a{
+            padding: 4px 4px;            
+            color: white;
+            margin: 4px 10px;
+            text-decoration: none;
+        }
+        .navbar li a:hover{
+            font-size: 30px;
+        }
+        .search{
+            float:right;
+            margin: 12px 112px;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            width: 165px;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+            <div class="search">
+                <input type="text" name="serach" id="serach" placeholder="Search here">
+            </div>
+         </ul>
+    </nav>
+
+    <!-- border of ul and li -->
+    <!-- <ul style="border:2px solid green">
+    <li style="border:orange">Hlw</li>
+    <li style="border:orange">Hlw</li>
+    <li style="border:orange">Hlw</li>
+    </ul>
+    <li style="border:orange">Hlw</li> -->
+</body>
+</html>
