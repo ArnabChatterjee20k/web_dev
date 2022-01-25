@@ -1,4 +1,4 @@
-A brief description of what this project does and who it's forThis folder contains all my files regarding full stack web development.
+This folder contains all my files regarding full stack web development.
 
 
 
