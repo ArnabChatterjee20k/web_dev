@@ -37,3 +37,13 @@ const obj1 = {
 const { model, age, start, data } = obj1
 console.log(model, age, start, data)
 start()
+
+
+// another way using aliasing
+const user = {
+    id: 339,
+    name: 'Fred',
+    age: 42
+};
+const { name: callSign } = user; // value of name will be assigned to name
+console.log(callSign); //prints: Fred
