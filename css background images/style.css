@@ -1,0 +1,56 @@
+/* Text is more important than bg image. It must be redeable */
+/* since the div has no height and width background will not be visible */
+
+/* using single bg */
+.bg-image{
+    outline: 2px solid black;
+    padding: 20rem;
+    
+    background-image: url("coverpage.png") , url("peach.png")  ;
+    background-repeat: no-repeat;
+
+    background-size: 50% 70%; /* width and height*/
+
+    /* default value of position is left top . So all the values are referrenced to top left*/
+    background-position: 100px 60px; /*x axis and y axis*/
+    
+    /* both of them are same */
+    background-position: 12rem; /* here we are specifying the x axis unit and y remains center */
+    background-position: 15rem;/* x axis is 15rem from left and center in y axis */
+    background-position: 12rem center;
+
+    background-position: bottom ; /* here the y axis is bottom and x is center */
+    background-position: bottom center ; /* same as previous */
+    background-position: bottom right;
+
+
+    /* getting things done from top right or other unit. */
+    background-position: top right;
+    background-position: top 12px right 25px; /* from top 12px and from right 25px */
+
+    /* position values can be negative as well */
+}
+
+/* using multiple bg image together.
+If single value provided then same property will be applied to all.
+Here we have to use values with , for providing different values . */
+.bg-image{
+    background-image: url("coverpage.png") , url("peach.png")  ;
+    background-position: top left , bottom right;
+    background-repeat: no-repeat,repeat;
+
+    background-size: 30% , 10%;
+}
+
+
+/* size in depth */
+.bg-image{
+    background-image: url("peach.png") ;
+
+    background-size: cover; /* image size will get bigger and cover the container. So may loose it's loose it's quality*/
+    background-position: bottom right ; 
+    /* when background position is combined with cover then while bg image will shrink or squeezes in smaller devices then all other side will get cropped except the part provided. */
+    /* here bottom and right are not getting squeezed. */
+
+
+}
