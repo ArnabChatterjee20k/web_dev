@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(231, 194, 100);
+
+    font-family: sans-serif;
+}
+
+.box{
+    background-color: white;
+    padding: 4em;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0,0,0,.25);
+    transition:transform 300ms , box-shadow 300ms;
+}
+.box:hover{
+    /* 
+    only transform will make feel the dimensions are 
+    only getting elevated. So adjust shadow but dont animate
+    shadow as rendering shadow is slow
+    */
+    transform: scale(1.1);
+    box-shadow: 0 5px 80px rgba(0,0,0,.25);
+
+}
+.inner-box{
+    background-color: white;
+    padding: 0.5em;
+    box-shadow: 0 5px 10px rgba(0,0,0,.25);
+    box-shadow: 0 5px 10px rgba(0,0,0,.25);
+}
+
+.elevated{
+    position:absolute;
+    bottom: -25px;
+    box-shadow: 0 10px 10px rgba(0,0,0,.25);
+    /*since this overlaying the box so the
+    distance between this and body should
+    be more than box and body*/
+}

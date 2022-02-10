@@ -1,0 +1,31 @@
+body{
+    /* setting bg style and content in center of page */
+    background-color: rgb(241, 196, 111);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background: white;
+    padding: 2em;
+    width: 100%;
+    margin: 2em;
+    text-align: center;
+    /* box-shadow: 0 5px 25px 0 rgba(0,0,0,.25);no need to use spread to increase teh size     */
+}
+
+.box-higher{
+    box-shadow: 0 5px 60px 0 rgba(0,0,0,.5);
+}
+
+.box-lower{
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.5);
+}
+
+/* 
+    Shadow indicates that the element is hovering. 
+    Never make one offset of one box +ve and other -ve. Like here -5px and 5px respectively.
+    If did it will create a confusion that from where light is coming 
+*/

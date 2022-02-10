@@ -1,0 +1,63 @@
+body{
+    /* setting bg style and content in center of page */
+    background-color: rgb(245, 245, 136);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background: white;
+    padding: 2em;
+    width: 60%;
+    /* color: blue; */
+    box-shadow: inset 0 0 20px 4px rgba(0, 0, 0 , 0.5) ;  /* horizontal-offset | vertical-offset | blur-radius(size of blur) | spread | color | inset or initial or inherit*/
+
+    /* using multiple values */
+    box-shadow: 100px 100px 200px red,
+                -100px -100px 200px blue,
+                100px -100px 200px purple,
+                -100px 100px 200px green
+                ;
+}
+
+
+/*  Rules and terms
+
+    v-set and h-set are mandatory properties to get effect. 0 0 if used then not visible so put some values greater than 0 
+    
+    For giving spread we have to give blur first as it cant be skipped
+
+
+    value must not be in percentage
+    +ve value of h-set means shadow form will be in right side. and +ve value of v-set means shadow will downward. 
+    means we can say the default side is top left from their shadow is applied
+    
+    with increase in size of blur radius the opacity decreases.
+    positive value only. 
+    Default is 0px.
+    No percentage.
+    Blur 20px means first it is solid then gradually at 20px it will get blurred.
+
+    spread make some gap and then the blur starts. 
+    Means 20px spread means after 20px dist blur will come. 
+    Means it is shadow distance
+    can take negative value as well. negative decrease the size of shadow
+    negative value dont spread the shadow
+    
+    default color is not black.
+    The color of the shadow. The default value is the text color.
+    The currentcolor keyword refers to the value of the color property of an element.
+    Hexadecimal colors
+    Hexadecimal colors with transparency
+    RGB colors
+    RGBA colors
+    HSL colors
+    HSLA colors
+
+
+    inset	Optional. Changes the shadow from an outer shadow (outset) to an inner shadow	
+    initial	Sets this property to its default value. 
+    inherit	Inherits this property from its parent element. 
+*/
