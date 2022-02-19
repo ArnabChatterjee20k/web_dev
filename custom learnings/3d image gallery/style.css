@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.container{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    animation: animation 20s infinite linear alternate-reverse;
+    transform-style: preserve-3d;
+}
+@keyframes animation {
+    from{
+        transform: perspective(1000px) rotateY(0) rotateX(-90deg);
+    }
+    to{
+        transform: perspective(1000px) rotateY(360deg) rotateX(90deg);
+    }
+}
+.container span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform:  rotateY(calc(var(--i)*45deg)) translateZ(50px); 
+}
+.container span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100px;
+    max-height: 100px;
+    transform-style: preserve-3d;
+    transition: 2s;
+}

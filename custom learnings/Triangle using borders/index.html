@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .box{
+            height: 400px;
+            width: 400px;
+            background-color: #000;
+            position: relative;
+            border-radius: 0px 0px 20px 20px;
+            transform-style: preserve-3d;
+            perspective: 600px;
+        }
+        .box::before{
+            content: "";
+            position: absolute;
+            border-left: 200px solid transparent;
+            border-right: 200px solid #0066cc;
+            border-top: 200px solid transparent;
+            border-bottom: 200px solid #0066cc;
+            border-radius: 0px 0px 20px 20px;
+            z-index: 4;
+        }
+        
+        .box::after{
+            content: "";
+            position: absolute;
+            border-left: 200px solid #0073e6;
+            border-right: 200px solid transparent;
+            border-top: 200px solid transparent;
+            border-bottom: 200px solid #0073e6;
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        .cover{
+            content: "";
+            position: absolute;
+            border-top: 200px solid #3399ff;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 200px solid transparent;
+            border-radius: 0px 0px 20px 20px;
+            z-index: 5;
+
+            transform-origin: top;
+            transition: 2s 1.25s ease;
+        }
+
+        .box:hover .cover{
+            transform: rotateX(270deg);
+            transition: 1s ease;
+        }
+
+        .image{
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            background-color: red;
+            transition: 2s;
+            /* z-index: 10; */
+        }
+        
+        .box:hover .image{
+            transform: translateY(-100px);
+            transition: 1s 1s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="cover"></div>
+        <div class="image"></div>
+    </div>
+</body>
+</html>
