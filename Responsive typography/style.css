@@ -1,0 +1,11 @@
+p{
+    font-size: clamp(1rem ,2.5vw , 4rem);
+    /* Here
+        1rem  is the min value
+        2.5vw is the preffered value
+        4rem is the max value
+     */
+    font-size: clamp(1rem ,2.5vw + 1rem, 4rem); 
+    /* we  can even use operator directly and result will be same as calc*/
+    font-size: clamp(1rem ,calc(2.5vw + 1rem), 4rem); 
+}
