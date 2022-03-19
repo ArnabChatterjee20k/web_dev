@@ -1,0 +1,15 @@
+.container{
+    margin: 10em 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,100px);
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    /* grid-template-rows: repeat(2,40px);  will create implicit rows after 2nd row*/
+    grid-auto-rows: 100px;
+    gap: 4px;
+}
+.container div{
+    border: 2px solid red;
+    text-align: center;
+    background-color: beige;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
