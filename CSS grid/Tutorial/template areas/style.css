@@ -1,0 +1,30 @@
+.container{
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(5 , 1fr);
+    grid-template-rows: 40px 200px 40px; 
+    
+    /* making identifer for the 5 columns and 3 rows */
+    grid-template-areas: 
+                        ". h h h h"
+                        "m c c c c "
+                        ". . f f .";
+}
+
+.container div{
+    border: 2px solid red;
+    text-align: center;
+}
+
+.header{
+    grid-area: h;
+}
+.content{
+    grid-area: c;
+}
+.menu{
+    grid-area: m;
+}
+.footer{
+    grid-area: f;
+}
