@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin-top: 2em;
+    min-height: 100vh;
+    background-color: rgb(243, 237, 183);
+}
+.container div{
+    text-align: center;
+    /* padding: 3em; */
+}
+
+.container div:nth-child(1){
+    background-color: rgb(230, 101, 78);
+}
+.container div:nth-child(2){
+    background-color: rgb(76, 240, 76);
+}
+.container div:nth-child(3){
+    background-color: rgb(149, 49, 231);
+}
+.container div:nth-child(4){
+    background-color: rgb(130, 221, 221);
+}
+.container div:nth-child(5){
+    background-color: rgb(188, 197, 56);
+}
+.container div:nth-child(6){
+    background-color: rgb(196, 147, 73);
+}
+
+
+/* defining our grid */
+
+.container-all-tut{
+    display: grid;
+    gap: 2px;
+    margin: 10em;
+}
+
+/* first one */
+
+.container-1{
+    display: grid;
+    margin: 10em;
+
+    /*Making coloumns and  defining the size of our columns or width of the element*/
+    grid-template-columns: 100px auto  100px  ; /*3 sizes we provided means we have provided size for 3 columns. No. of sizes = no. of columns*/
+    
+    /* defining the size of our rows or height of the element*/
+    grid-template-rows: 100px 100px ;
+
+    /* gap: 1em 4em; */
+    gap : 3px;
+}
+
+/* making a 2 columns tabular system */
+.container-2{
+    grid-template-columns: 100px auto ;
+    grid-template-rows: 50px 50px 200px;
+}
+
+
+
+/* using fraction units and repeat - better way to create grid columns and rows */
+/* 2fr will be twice the 1fr element. It becomes relative now */
+.container{
+    /* grid-template-columns: repeat(6,2fr); repeat 3 times 1fr */
+    /* grid-template-rows: repeat(1,1fr)  ; */
+
+    /* shorthand */
+    grid-template: repeat(2,100px) / repeat(3,4fr); /* row values/column value */
+}

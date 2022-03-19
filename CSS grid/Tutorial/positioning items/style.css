@@ -1,0 +1,31 @@
+/* MAKING a 2 column unit */
+.container{
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(2,1fr);
+    /* grid-template-columns: 1fr 5fr; */
+    grid-template-rows: 40px 200px 40px; /*third row is blank now*/
+}
+
+.container div{
+    border: 2px solid red;
+    text-align: center;
+}
+
+/* 2 columns means 3 column lines */
+
+.header{
+    grid-column: 2/-1;
+}
+.footer{
+    /* grid-column-start: 1;  start at first column line */
+    /* grid-column-end: 3;  end at 3rd column line or takes 2 columns space */
+
+    grid-column:  1 / -1; 
+}
+.content{
+    grid-column: 2/-1;
+}
+.menu{
+    grid-row: 1/span 2;
+}
