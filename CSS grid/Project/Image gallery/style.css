@@ -19,19 +19,35 @@ body{
             -19px -19px 38px #ffffff;
 }
 
-.card{
-    transition: 2s ;
+.card , #dialog{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
     padding: 1em;
 }
-.card img{
+.card{
+    cursor: pointer;
+}
+#img{
     border-radius: 50%;
 }
 
 p{
     color: rebeccapurple;
 
+}
+
+
+#dialog::backdrop{
+    background: palegreen;
+    opacity: 0.4;
+}
+
+#close{
+    border: 2px solid whitesmoke;
+    background-color: slateblue;
+    color: whitesmoke;
+    font-weight: 700;
+    cursor: pointer;
 }
