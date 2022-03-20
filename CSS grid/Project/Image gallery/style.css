@@ -1,0 +1,37 @@
+body{
+    background-color: #dde1e7;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.container{
+    display: grid;
+    padding: 1em;
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    gap: 5rem;
+    grid-auto-rows: minmax(15rem,1fr);
+}
+#neu{
+    border-radius: 6px;
+    background: #e0e0e0;
+    box-shadow:  19px 19px 38px #bebebe,
+            -19px -19px 38px #ffffff;
+}
+
+.card{
+    transition: 2s ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 1em;
+}
+.card img{
+    border-radius: 50%;
+}
+
+p{
+    color: rebeccapurple;
+
+}
