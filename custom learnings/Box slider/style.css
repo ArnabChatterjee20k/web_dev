@@ -1,0 +1,20 @@
+.frame{
+    padding: 1em;
+    border: 2px solid red;
+    overflow: hidden;
+}
+.frame_track{
+    padding: 1em;
+    display: inline-flex;
+    margin: auto;
+    overflow: hidden;
+    transition: 100ms linear;
+}
+.box{
+    display: inline-block;
+    width: 400px;
+    background-color: blue;
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem;
+}
