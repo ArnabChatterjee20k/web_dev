@@ -17,7 +17,7 @@ for(i=0;i<=8;i++){
     frame_track_width+=width+margin // actual width of the track and it is of no use.
 }
 
-let box_we_want_to_slide = i-2// if i is the number of box and we want to stop the slider when i-2 box completely invisible
+let box_we_want_to_slide = i-2// if i is the number of box and we want to stop the slider when i-2 box completely invisible and (i-1) box partially became invisible
 let total_box_width = 2*(i-1)*margin + width*box_we_want_to_slide// excluding the left side margin of the first box and right margin of the last box
 
 console.log(total_box_width)
@@ -28,7 +28,7 @@ function slide(){
     let pos = 0;// postion_tracker of the track
     let track_change = 400;
         next.onclick = ()=>{
-            /** We will stop the slider when the i-2 box has completely become invisible */
+            /** We will stop the slider when the i-2 box has completely become invisible and (i-1) box partially became invisible */
             if(pos>=-total_box_width){
                 pos-=track_change
                 frame_track.style.transform = `translateX(${pos}px)`
