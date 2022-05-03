@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../input.css">
+</head>
+<body>
+    <!-- if we go beyond sm ie screen width 600px (min width ) apply  -->
+    <div class="h-72 w-72 m-12 bg-green-700 md:bg-red-600 sm:bg-yellow-500"></div>
+
+    <!-- approach should be mobile first designs -->
+    <div class="text-xs bg-red-700 md:text-xl md:bg-red-500 md:p-12  lg:text-2xl lg:bg-red-300 lg:m-[100px]">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, aspernatur officiis. Provident nulla odit neque optio quasi nisi nostrum et officia autem tenetur nihil, iusto vitae enim exercitationem at delectus.
+        <br>
+        <br>
+        <!-- simulate the screen sizes -->
+        <h1 class="sm:invisible">less than sm</h1>
+        <h1 class="invisible sm:visible md:invisible">sm</h1>
+        <h1 class="invisible md:visible lg:invisible">md</h1>
+        <h1 class="invisible lg:visible">lg</h1>
+    </div>
+</body>
+</html>
