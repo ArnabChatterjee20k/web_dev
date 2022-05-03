@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../input.css">
+</head>
+<body class="p-12">
+    <!-- hover state -->
+    <button class="bg-sky-700 hover:bg-sky-600 text-white rounded p-2">
+        hover me
+    </button>
+    
+    <!-- focus also works with tab -->
+    <!-- focus with ring-->
+    <button class= "focus:ring-4 focus:border-8 outline-none bg-sky-700 hover:bg-sky-600 text-white rounded p-2">
+        focus
+    </button>
+
+    <!-- focus-->
+    <button class= "focus:bg-violet-500 outline-none bg-sky-700 hover:bg-sky-600 text-white rounded p-2">
+        focus
+    </button>
+
+    <!-- active -->
+    <button class= "active:bg-black outline-none bg-sky-700 hover:bg-sky-600 text-white rounded p-2">
+        active
+    </button>
+    
+    <!-- nth child -->
+    <div>
+        <h2 class="text-3xl">nth child</h2>
+        <ul>
+            <!-- we have to explicitly provide the condition -->
+            <li class="even:bg-red-600 odd:bg-green-500">home</li>
+            <li class="even:bg-red-600 odd:bg-green-500">about</li>
+            <li class="even:bg-red-600 odd:bg-green-500">service</li>
+            <li class="even:bg-red-600 odd:bg-green-500">contact</li>
+        </ul>
+    </div>
+</body>
+</html>
